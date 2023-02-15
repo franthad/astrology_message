@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Astrology Generator</title>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="./style.css">
+		<script type="text/javascript">
+			
+			const zodiacArray = ['Aquarius','Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn',];
+const randomZodiac = zodiacArray[Math.floor(Math.random() * zodiacArray.length)];
+
+const luckPrediction = Math.floor(Math.random() * 107);
+
+const readingArray = ['Wear brown shoes will make you very happy today',
+'You must take care not to drift into isolation or excessive self-involvement',
+'Your success requires personal sacrifice and unwavering dedication',
+'Break free of an addiction or unhealthy attachment, but you must be patient with yourself',
+'You can pursue an old ambition with new intensity and vigor. Success is imminent',
+'Strength directs you to gather your bravery and fortitude to overcome a stubborn challenge',
+'Pursue success through balance and moderation. Avoid rash decisions or extreme solutions',
+'Be on the lookout for coming events; They cast their shadows beforehand',
+'Examine your motivations and priorities and abandon what is useless or petty'];
+const readingPrediction = readingArray[Math.floor(Math.random() * readingArray.length)];
+
+let message = `Your zodiac sign is: ${randomZodiac}.<br>
+Your luck number prediction for today is: ${luckPrediction}.<br>
+Your reading for today is as follows below:<br> ${readingPrediction}.`
+
+console.log(message);
+		</script>
+    </head>
+
+    <body>
+		
+        <div id = "box">
+		<h1> The inspirational message <br> <br>
+			<script type="text/javascript">
+				document.write(message)
+			</script>
+		</h1>
+		</div>
+		
+		<a id="animated" onClick="window.location.reload();" class="button">Find your luck sign!</a>		
+	
+	</body>
+</html>
